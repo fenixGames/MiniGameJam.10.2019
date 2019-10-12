@@ -37,7 +37,7 @@ sysinfo.txt
 *.swp
 
 # Custom, because apple misbehaving
-*.unity.meta
-*.cs.meta
-*.asset.meta
+#*.unity.meta
+#*.cs.meta
+#*.asset.meta
 *.sln
