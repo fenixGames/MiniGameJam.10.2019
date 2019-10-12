@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9137bd55b0ae59c48aac883e590f3a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 10
   turningSpeed: 1
   mouseTracker: {fileID: 8253808218985815129}
   layerMask:
