@@ -15,6 +15,7 @@ public class Tower : MonoBehaviour
 
 	[Header("Target Selection:")]
 	public string targetTag = "Enemy";
+	public bool useTargetRaycasting = true;
 	public float attackRange = 3.0f;            // The maximum attack range before engaging a target.
 
 	[Header("Aiming:")]
@@ -86,9 +87,20 @@ public class Tower : MonoBehaviour
 		GameObject bestTargetGO = null;
 		foreach (GameObject go in targets)
 		{
-			float distSq = Vector3.SqrMagnitude(go.transform.position - transform.position);
+			Vector3 goPos = go.transform.position;
+			float distSq = Vector3.SqrMagnitude(goPos - transform.position);
 			if (distSq < attackRangeSq && distSq < bestDistSq)
 			{
+				// Optionally, use raycasting to target to check for obstructions:
+				if (useTargetRaycasting)
+				{
+					RaycastHit hit;
+					if (Physics.Linecast(transform.position, goPos, out hit) && hit.collider.gameObject != go)
+					{
+						continue;
+					}
+				}
+
 				bestTargetGO = go;
 				bestDistSq = distSq;
 			}
