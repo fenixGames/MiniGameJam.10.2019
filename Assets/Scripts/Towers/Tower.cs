@@ -72,7 +72,6 @@ public class Tower : MonoBehaviour
 			{
 				bestTargetGO = go;
 				bestDistSq = distSq;
-				Debug.Log($"Switching to target {go.name} (@{distSq})");
 			}
 		}
 
