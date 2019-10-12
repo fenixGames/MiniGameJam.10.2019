@@ -107,7 +107,15 @@ public class Tower : MonoBehaviour
 		}
 
 		// Set the selected object as our new target:
-		if (target != bestTargetGO) targetAgent = target.GetComponent<NavMeshAgent>();
+		GameObject previousTarget = target;
+		if (target != null)
+		{
+			if (previousTarget != target) targetAgent = bestTargetGO.GetComponent<NavMeshAgent>();
+		}
+		else
+		{
+			targetAgent = null;
+		}
 		target = bestTargetGO;
 	}
 
