@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5703120783180632332}
-  - component: {fileID: 5703120783180632334}
   - component: {fileID: 5703120783180632333}
+  - component: {fileID: 5704233736524114558}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Tower
@@ -33,30 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5703120783180632334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5703120783180632323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17c30d9a9ea75426c9a450cdd39217f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: Enemy
-  attackRange: 100
-  maxTurnRate: 90
-  minFiringAngle: 5
-  scanInterval: 0.1
-  projectileSpeed: 5
-  fireInterval: 0.5
-  projectilePrefab: {fileID: 1349573459369741479, guid: e3557a40d9e11412e9c2b4a433ddda51,
-    type: 3}
-  damage:
-    type: 1
-    amount: 1
 --- !u!114 &5703120783180632333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,6 +49,29 @@ MonoBehaviour:
   damageResistances: 0
   damageImmunities: 0
   damageWeaknesses: 0
+--- !u!114 &5704233736524114558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5703120783180632323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc35aca6741c58c4aa252694159badad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Enemy
+  attackRange: 3
+  maxTurnRate: 360
+  minFiringAngle: 5
+  scanInterval: 0.1
+  projectileSpeed: 5
+  projectilePrefab: {fileID: 5288789264792999153, guid: e3557a40d9e11412e9c2b4a433ddda51,
+    type: 3}
+  damage:
+    type: 1
+    amount: 1
 --- !u!1001 &5703120783413578068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93,7 +92,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: bf8c9a8826bc29545b84728a10b67195,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.445
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bf8c9a8826bc29545b84728a10b67195,
         type: 3}
