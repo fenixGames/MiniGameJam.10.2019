@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5703120783180632332}
   - component: {fileID: 5703120783180632333}
   - component: {fileID: 5704233736524114558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tower
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -61,12 +61,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc35aca6741c58c4aa252694159badad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turnMode: 0
   targetTag: Enemy
   attackRange: 3
   maxTurnRate: 360
   minFiringAngle: 5
   scanInterval: 0.1
   projectileSpeed: 5
+  fireInterval: 0.5
   projectilePrefab: {fileID: 5288789264792999153, guid: e3557a40d9e11412e9c2b4a433ddda51,
     type: 3}
   damage:
