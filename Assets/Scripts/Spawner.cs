@@ -18,10 +18,11 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         timeAccumulator += Time.deltaTime;
-        while(timeAccumulator > interval)
+        while(capacity > 0 && timeAccumulator > interval)
         {
-            Instantiate(enemyPrefab, GameObject.Find("SpawnPoint").transform.position, Quaternion.identity);
+            Instantiate(enemyPrefab, gameObject.transform.position, Quaternion.identity);
             timeAccumulator -= interval;
+            capacity--;
         }
     }
 }

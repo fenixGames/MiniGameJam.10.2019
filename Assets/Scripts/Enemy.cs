@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public int hp = 200;
+    public int power = 10;
 
     NavMeshAgent navMeshAgent;
     // Start is called before the first frame update
@@ -26,7 +27,8 @@ public class Enemy : MonoBehaviour
             {
                 if (!navMeshAgent.hasPath || navMeshAgent.velocity.sqrMagnitude == 0f)
                 {
-                    Debug.Log("Game Over!");
+                    Destroy(gameObject);
+                    GameObject.Find("PlayerState").GetComponent<PlayerState>().Damage(power);
                 }
             }
         }
