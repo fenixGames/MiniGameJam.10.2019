@@ -23,6 +23,10 @@ public class Spawner : MonoBehaviour
             Instantiate(enemyPrefab, gameObject.transform.position, gameObject.transform.rotation);
             timeAccumulator -= interval;
             capacity--;
+
+            interval = interval * 0.95f;
+            if (interval < 0.1f)
+                interval = 0.1f;
         }
     }
 }
