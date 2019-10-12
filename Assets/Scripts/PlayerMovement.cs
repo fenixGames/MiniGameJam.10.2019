@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private float turningSpeed = 1.0f;
 
     private Direction direction = Direction.Stationary;
+    public LayerMask layerMask;
 
     // Start is called before the first frame update
     void Awake()
@@ -87,7 +88,24 @@ public class PlayerMovement : MonoBehaviour
 
         Rigidbody rigidbody = GetComponent<Rigidbody>();
         rigidbody.velocity = new Vector3(xSpeed, 0.0f, ySpeed);
-        Debug.Log(rigidbody.velocity);
+    }
+
+    private Vector3 GetPositionOfCursor()
+    {
+        
+        return new Vector3();
+    }
+
+    private void RotateTorwardsPoint()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (!Physics.Raycast(ray, out hit, maxDistance: 100, layerMask: layerMask))
+            return;
+
+        Vector3 direction = (hit.point - transform.position).normalized;
+        transform.rotation = Quaternion.LookRotation(direction);
     }
 
     // Update is called once per frame
@@ -97,5 +115,6 @@ public class PlayerMovement : MonoBehaviour
         CheckKeyUp();
 
         MovePlayer();
+        RotateTorwardsPoint();
     }
 }
