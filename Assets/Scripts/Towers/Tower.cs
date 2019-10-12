@@ -59,9 +59,11 @@ public class Tower : MonoBehaviour
 			return;
 		}
 
+		//Debug.Log($"Found targets: {targets.Length}");
+
 		// Select the closest enemy to self:
 		float attackRangeSq = attackRange * attackRange;
-		float bestDistSq = 0.0f;
+		float bestDistSq = 1.0e+8f;
 		GameObject bestTargetGO = null;
 		foreach (GameObject go in targets)
 		{
@@ -70,6 +72,7 @@ public class Tower : MonoBehaviour
 			{
 				bestTargetGO = go;
 				bestDistSq = distSq;
+				Debug.Log($"Switching to target {go.name} (@{distSq})");
 			}
 		}
 
@@ -81,7 +84,7 @@ public class Tower : MonoBehaviour
 	{
 		// Calculate target angle towards current target:
 		Vector3 targetDir = (target.transform.position - transform.position).normalized;
-		targetAngle = Mathf.Atan2(targetDir.y, targetDir.x) * Mathf.Rad2Deg;
+		targetAngle = Mathf.Atan2(targetDir.y, targetDir.x) * Mathf.Rad2Deg + 90;
 
 		// Rotate towards target angle:
 		float previousAngle = currentAngle;
