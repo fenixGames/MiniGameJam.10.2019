@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
         timeAccumulator += Time.deltaTime;
         while(capacity > 0 && timeAccumulator > interval)
         {
-            Instantiate(enemyPrefab, gameObject.transform.position, Quaternion.identity);
+            Instantiate(enemyPrefab, gameObject.transform.position, gameObject.transform.rotation);
             timeAccumulator -= interval;
             capacity--;
         }
