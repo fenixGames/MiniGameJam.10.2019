@@ -123,6 +123,7 @@ public class Tower : MonoBehaviour
 	{
 		// Get target position and do some basic target prediction based on target's speed:
 		Vector3 targetPos = target.transform.position;
+        targetPos += Vector3.up * 0.5f;
 		if (useTargetPrediction && targetAgent != null)
 		{
 			float targetDist = Vector3.Distance(targetPos, transform.position);
