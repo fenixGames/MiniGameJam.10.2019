@@ -21,7 +21,7 @@ public class Cloner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) && timer > cloningTimeout)
+        if (Input.GetKeyDown(KeyCode.Space) && timer > cloningTimeout)
         {
             GameObject tower = Instantiate(towerPrefab);
             tower.transform.position = transform.position;
