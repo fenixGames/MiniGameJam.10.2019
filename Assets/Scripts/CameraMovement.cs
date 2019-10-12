@@ -29,6 +29,7 @@ public class CameraMovement : MonoBehaviour
         Vector3 lookDirection = mouseTracker.transform.position - player.transform.position;
         Vector3 cameraVector = Vector3.Cross(lookDirection, Vector3.up).normalized;
         Vector3 cameraPosition = GetMiddlePoint() + offset * cameraVector;
+        cameraPosition.y = transform.position.y;
 
         transform.position = cameraPosition;
     }
