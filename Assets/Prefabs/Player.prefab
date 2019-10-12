@@ -338,7 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 5703120783180632323, guid: a1a1771016edf426bb2e9301a2a54227,
     type: 3}
-  cloningTimeout: 10
+  cloningTimeout: 2
 --- !u!1 &1831465376362828471
 GameObject:
   m_ObjectHideFlags: 0
