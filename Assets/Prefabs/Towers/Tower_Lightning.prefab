@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5703120783180632333}
   - component: {fileID: 5704233736524114558}
   m_Layer: 8
-  m_Name: Tower
+  m_Name: Tower_Lightning
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
   scanInterval: 0.1
   projectileSpeed: 8
   fireInterval: 0.5
-  projectilePrefab: {fileID: 7347463840036872274, guid: b627c5d306bcd47979b0236cfd450990,
+  projectilePrefab: {fileID: 3366424122755947311, guid: 017270964d012498abf9257e4d570def,
     type: 3}
   damage:
     type: 1
