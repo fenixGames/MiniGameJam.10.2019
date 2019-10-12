@@ -6,6 +6,8 @@ public class Cloner : MonoBehaviour
 {
     [SerializeField]
     private GameObject towerPrefab;
+    [SerializeField]
+    private GameObject towerPrefab2;
 
     [SerializeField]
     private float cloningTimeout = 10.0f;
@@ -27,6 +29,13 @@ public class Cloner : MonoBehaviour
             tower.transform.position = transform.position;
             timer = 0.0f;
         }
+        if (Input.GetKeyDown(KeyCode.Return) && timer > cloningTimeout)
+        {
+            GameObject tower = Instantiate(towerPrefab2);
+            tower.transform.position = transform.position;
+            timer = 0.0f;
+        }
+
         if (timer < cloningTimeout)
             timer += Time.deltaTime;
     }

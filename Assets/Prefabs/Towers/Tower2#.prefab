@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5505634842069429771
+--- !u!1 &4991222273147207274
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 909853594353080246}
-  - component: {fileID: 8259263200380226545}
+  - component: {fileID: 8324870514920475079}
+  - component: {fileID: 3802942980438846241}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &909853594353080246
+--- !u!4 &8324870514920475079
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5505634842069429771}
+  m_GameObject: {fileID: 4991222273147207274}
   m_LocalRotation: {x: 0.70710576, y: -0, z: -0, w: 0.7071079}
   m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,17 +31,17 @@ Transform:
   m_Father: {fileID: 747380849914815054}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
---- !u!108 &8259263200380226545
+--- !u!108 &3802942980438846241
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5505634842069429771}
+  m_GameObject: {fileID: 4991222273147207274}
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 0
-  m_Color: {r: 0, g: 0.8399844, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9005834, b: 0, a: 1}
   m_Intensity: 5
   m_Range: 7
   m_SpotAngle: 30
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 5703120783180632333}
   - component: {fileID: 5704233736524114558}
   m_Layer: 8
-  m_Name: Tower
+  m_Name: Tower2#
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

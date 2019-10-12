@@ -397,7 +397,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  turningSpeed: 1
   mouseTracker: {fileID: 8253808218985815129}
   layerMask:
     serializedVersion: 2
@@ -416,7 +415,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 5703120783180632323, guid: a1a1771016edf426bb2e9301a2a54227,
     type: 3}
-  cloningTimeout: 2
+  towerPrefab2: {fileID: 5703120783180632323, guid: e60ad0c59d1e79c41879fa1951a2b7e0,
+    type: 3}
+  cloningTimeout: 0.5
 --- !u!1 &1831465376362828471
 GameObject:
   m_ObjectHideFlags: 0
