@@ -40,3 +40,4 @@ sysinfo.txt
 *.unity.meta
 *.cs.meta
 *.asset.meta
+*.sln
