@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e06b0163561ff4fbb583756d07162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 4576272701065345358, guid: 37595279c03ee3b439f3273c209dbc0a,
+  towerPrefab: {fileID: 5703120783180632323, guid: a1a1771016edf426bb2e9301a2a54227,
     type: 3}
   cloningTimeout: 10
 --- !u!1 &1831465376362828471
