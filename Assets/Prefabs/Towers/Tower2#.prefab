@@ -41,7 +41,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 0
-  m_Color: {r: 1, g: 0.9005834, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.7691426, b: 1, a: 1}
   m_Intensity: 5
   m_Range: 7
   m_SpotAngle: 30
@@ -163,7 +163,7 @@ MonoBehaviour:
   scanInterval: 0.1
   projectileSpeed: 8
   fireInterval: 0.5
-  projectilePrefab: {fileID: 5288789264792999153, guid: e3557a40d9e11412e9c2b4a433ddda51,
+  projectilePrefab: {fileID: 3366424122755947311, guid: 017270964d012498abf9257e4d570def,
     type: 3}
   damage:
     type: 1
