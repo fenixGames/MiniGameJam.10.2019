@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float turningSpeed = 1.0f;
 
+    [SerializeField]
+    private GameObject mouseTracker;
+
     private Direction direction = Direction.Stationary;
     public LayerMask layerMask;
 
@@ -90,21 +93,9 @@ public class PlayerMovement : MonoBehaviour
         rigidbody.velocity = new Vector3(xSpeed, 0.0f, ySpeed);
     }
 
-    private Vector3 GetPositionOfCursor()
-    {
-        
-        return new Vector3();
-    }
-
     private void RotateTorwardsPoint()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (!Physics.Raycast(ray, out hit, maxDistance: 100, layerMask: layerMask))
-            return;
-
-        Vector3 direction = (hit.point - transform.position).normalized;
+        Vector3 direction = (mouseTracker.transform.position - transform.position).normalized;
         transform.rotation = Quaternion.LookRotation(direction);
     }
 
