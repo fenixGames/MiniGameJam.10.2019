@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 
 public class Tower : MonoBehaviour
 {
@@ -8,17 +9,26 @@ public class Tower : MonoBehaviour
 		YawOnly
 	}
 
-	public TurnMode turnMode = TurnMode.AllAxis;
+	[Header("Target Prediction:")]
+	public bool useTargetPrediction = true;
+	public float targetPredictionStrength = 1.0f;
 
+	[Header("Target Selection:")]
 	public string targetTag = "Enemy";
-	public float attackRange = 3.0f;			// The maximum attack range before engaging a target.
+	public float attackRange = 3.0f;            // The maximum attack range before engaging a target.
+
+	[Header("Aiming:")]
+	public TurnMode turnMode = TurnMode.AllAxis;
 	public float maxTurnRate = 360.0f;      	// max. rotation change in degrees per second.
 	public float minFiringAngle = 5.0f;			// min. angle towards target within which we may open fire.
 	public float scanInterval = 0.1f;       	// Every how many seconds to scan for targets to shoot at.
+
+	[Header("Firing:")]
 	public float projectileSpeed = 5.0f;        // Starting speed of projectiles fired at the target, in meters per second.
-	public float fireInterval = 0.5f;			// min. time interval between consecutive shots fired, in seconds.
+	public float fireInterval = 0.5f;           // min. time interval between consecutive shots fired, in seconds.
 
 	private GameObject target = null;
+	private NavMeshAgent targetAgent = null;
 	private float currentAngle = 0.0f;
 	private float targetAngle = 0.0f;
 	private float lastScanTime = -1.0f;
@@ -84,13 +94,26 @@ public class Tower : MonoBehaviour
 			}
 		}
 
-		// Set the selected object as our new target: 
+		// Set the selected object as our new target:
+		if (target != bestTargetGO) targetAgent = targetAgent.GetComponent<NavMeshAgent>();
 		target = bestTargetGO;
 	}
 
 	private void RotateTowardsTarget()
 	{
-		Vector3 targetDir = (target.transform.position - transform.position).normalized;
+		// Get target position and do some basic target prediction based on target's speed:
+		Vector3 targetPos = target.transform.position;
+		if (useTargetPrediction && targetAgent != null)
+		{
+			float targetDist = Vector3.Distance(targetPos, transform.position);
+			float flightTime = targetDist / projectileSpeed * targetPredictionStrength;
+
+			Vector3 targetOffset = targetAgent.velocity * flightTime;
+			targetPos += targetOffset;
+		}
+
+		// Get direction to target:
+		Vector3 targetDir = (targetPos - transform.position).normalized;
 		float maxAngleDiff = maxTurnRate * Time.deltaTime;
 
 		if (turnMode == TurnMode.AllAxis)
