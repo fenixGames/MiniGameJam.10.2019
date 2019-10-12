@@ -22,9 +22,6 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 1.0f;
 
     [SerializeField]
-    private float turningSpeed = 1.0f;
-
-    [SerializeField]
     private GameObject mouseTracker;
 
     private Direction direction = Direction.Stationary;
