@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public int hp = 200;
+    public Health health;
     public int power = 10;
 
     NavMeshAgent navMeshAgent;
@@ -19,8 +19,6 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.rotation = GameObject.FindObjectOfType<Camera>().transform.rotation;
-
         if (!navMeshAgent.pathPending)
         {
             if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
