@@ -324,7 +324,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.85
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 2133119716}
   - component: {fileID: 2133119715}
   - component: {fileID: 2133119714}
+  - component: {fileID: 2133119718}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -479,6 +480,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2133119718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133119713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f8d4736a24af4584b156d4a28f5c3ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitpoints: 10
+  damageResistances: 0
+  damageImmunities: 0
+  damageWeaknesses: 0
 --- !u!1001 &5703120783944340932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -545,16 +562,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5703120783180632334, guid: a1a1771016edf426bb2e9301a2a54227,
-        type: 3}
-      propertyPath: maxTurnRate
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5703120783180632334, guid: a1a1771016edf426bb2e9301a2a54227,
-        type: 3}
-      propertyPath: attackRange
-      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1a1771016edf426bb2e9301a2a54227, type: 3}

@@ -46,11 +46,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Enemy
-  attackRange: 3
-  maxTurnRate: 360
+  attackRange: 100
+  maxTurnRate: 90
   minFiringAngle: 5
   scanInterval: 0.1
   projectileSpeed: 5
+  fireInterval: 0.5
   projectilePrefab: {fileID: 1349573459369741479, guid: e3557a40d9e11412e9c2b4a433ddda51,
     type: 3}
   damage:
@@ -92,7 +93,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: bf8c9a8826bc29545b84728a10b67195,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.445
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bf8c9a8826bc29545b84728a10b67195,
         type: 3}
