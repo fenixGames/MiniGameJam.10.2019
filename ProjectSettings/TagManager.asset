@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Tower
   - Enemy
+  - Fork
   layers:
   - Default
   - TransparentFX

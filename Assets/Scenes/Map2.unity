@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1171328340}
   m_Layer: 0
-  m_Name: Fork
+  m_Name: Fork2
   m_TagString: Fork
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
