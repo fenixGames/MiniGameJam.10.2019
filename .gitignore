@@ -35,3 +35,8 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.swp
+
+# Custom, because apple misbehaving
+*.unity.meta
+*.cs.meta
+*.asset.meta
